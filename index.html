@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods and Click Events</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <h1>Methods and Click Events</h1>
+
+    <div id="app">
+        <h2>{{ title }} - {{ author }} - {{ age }}</h2>
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Decrease Age</button>
+        <button @click="title = 'The Richest Man in Babylon'">Change Title</button>
+        <button @click="reverseTitle">Reverse Title</button>
+        <button @click="changeAuthor('George Samuel Clason')">Change Author</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
