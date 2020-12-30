@@ -3,15 +3,13 @@ const app = Vue.createApp({
         return {
             title: 'The Millionaire Next Door',
             author: 'Thomas Stanley',
-            age: 71
+            age: 71,
+            showBooks: true
         }
     },
     methods: {
-        reverseTitle() {
-            this.title = 'The Millionaire Next Door';
-        },
-        changeAuthor(author) {
-            this.author = author;
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks;
         }
     }
 })

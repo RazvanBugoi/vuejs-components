@@ -12,12 +12,17 @@
     <h1>Methods and Click Events</h1>
 
     <div id="app">
-        <h2>{{ title }} - {{ author }} - {{ age }}</h2>
-        <button v-on:click="age++">Increase Age</button>
-        <button v-on:click="age--">Decrease Age</button>
-        <button @click="title = 'The Richest Man in Babylon'">Change Title</button>
-        <button @click="reverseTitle">Reverse Title</button>
-        <button @click="changeAuthor('George Samuel Clason')">Change Author</button>
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <!-- v-show uses display property to hide / show an element, whereas v-if deletes the element completely from DOM -->
+        <div v-show="showBooks">Currently showing books</div>
     </div>
 
     <script src="script.js"></script>
